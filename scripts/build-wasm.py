@@ -22,6 +22,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, required=True, help='New directory; never overwrite an existing build')
     parser.add_argument('--jobs', type=int, default=4)
+    parser.add_argument('--source-archive', type=Path, help='Use an existing checksum-verified Ghostpdl archive instead of downloading')
     args = parser.parse_args()
     if args.jobs < 1:
         parser.error('--jobs must be positive')
@@ -32,8 +33,13 @@ def main():
     output = args.output.resolve()
     output.mkdir(parents=True, exist_ok=False)
     source = output / 'ghostpdl-10.08.0.tar.gz'
-    print('Downloading pinned source archive...', flush=True)
-    urllib.request.urlretrieve(lock['sourceURL'], source)
+    if args.source_archive:
+        if sha256(args.source_archive) != lock['sourceSHA256']:
+            raise SystemExit('Local source archive checksum mismatch')
+        shutil.copyfile(args.source_archive, source)
+    else:
+        print('Downloading pinned source archive...', flush=True)
+        urllib.request.urlretrieve(lock['sourceURL'], source)
     if sha256(source) != lock['sourceSHA256']:
         raise SystemExit('Source archive checksum mismatch')
     package = output / 'package'

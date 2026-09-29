@@ -13,7 +13,9 @@ compiler used for the inherited 2024 npm binary. See
 [the historical investigation](../../provenance/ORIGINAL-TOOLCHAIN.md).
 
 The full official release archive includes bundled dependencies. It is downloaded
-and checksum-verified before extraction. The original upstream build-support files
+and checksum-verified before extraction. An existing release archive can instead
+be supplied with `--source-archive`; the same pinned checksum is required. The
+original upstream build-support files
 are retained unchanged under `upstream/`. The historical subtree and source tag
 remain unchanged.
 
@@ -99,3 +101,32 @@ verify notices and the complete AGPL source scope for the actual integration,
 and record the approved binary hashes in ENGINE-840. Preserve older source
 versions while their binaries are distributed. The AGPL route has been selected;
 commercial licensing is outside the current work unless a customer requests it.
+
+## Complete source bundle
+
+Archive the exact committed recipe together with the official source release:
+
+```sh
+python3 scripts/build-source-archive.py \
+  --source-archive /absolute/ghostpdl-10.08.0.tar.gz \
+  --output /absolute/pdf-utils-gs-10.08.0-complete-source.tar.gz
+python3 scripts/build-source-archive.py \
+  --verify /absolute/pdf-utils-gs-10.08.0-complete-source.tar.gz
+```
+
+The deterministic bundle contains the unmodified upstream source archive with
+all bundled dependencies and notices, the exact build-support files, build and
+smoke scripts, full AGPL text and a checksum manifest. It reads committed recipe
+files from Git, avoiding uncommitted changes and generated build outputs. The
+optional `--working-tree` mode creates a review preview marked with
+`sourceRevision: null`; never publish that preview.
+
+After extracting a published bundle, rebuild without downloading upstream sources:
+
+```sh
+python3 scripts/build-wasm.py --output /absolute/new-build-directory \
+  --source-archive sources/ghostpdl-10.08.0.tar.gz --jobs 4
+```
+
+The digest-pinned compiler container must already be available for a fully
+offline build. Container execution always has network access disabled.
