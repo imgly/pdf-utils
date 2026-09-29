@@ -1,0 +1,13 @@
+{
+  "version": "10.08.0",
+  "files": {
+    "gs.js": {
+      "bytes": 98805,
+      "sha256": "3d106a3ef66b257513edb691abecd7b9f390fcb80a930490eecc256f42940b1d"
+    },
+    "gs.wasm": {
+      "bytes": 20334850,
+      "sha256": "4a6486d015ff2053138374500441a102fdd0739d0d1517a3621c7af429f326a0"
+    }
+  }
+}

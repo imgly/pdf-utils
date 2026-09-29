@@ -1,19 +1,22 @@
-# IMG.LY PDF utilities — source archive
+# IMG.LY PDF utilities
 
-This repository preserves the Ghostscript source and WASM build inputs associated
+This repository publishes the [standalone conversion wrapper](packages/pdf-conversion-utils/README.md) under AGPL-3.0-only and preserves matching Ghostscript build sources. The [10.08.0 source release](https://github.com/imgly/pdf-utils/releases/tag/source-gs-10.08.0-imgly-1) provides the maintained build inputs.
+
+It also preserves the historical Ghostscript source and WASM build inputs associated
 with `@privyid/ghostscript@0.1.0-alpha.1` (Ghostscript 10.03.1). It contains actual
 source files, not submodule links. A normal clone or source archive includes
 Ghostpdl and its bundled dependencies.
 
-**This is a historical source snapshot, not a new runtime release.** The original
+**The 10.03.1 tree is a historical source snapshot, not a new runtime release.** The original
 Emscripten/LLVM versions and a reproduced WASM build remain unverified. The snapshot
 does not establish suitability of this old Ghostscript version for production use.
-No IMG.LY proprietary runtime or editor source is included.
+The shared wrapper source is included; CE.SDK engine, editor, EPS importer and print-plugin code are not included. Publishing these sources does not publish an npm package.
 
 ## Contents
 
 | Path                             | Contents                                                                                      |
 | -------------------------------- | --------------------------------------------------------------------------------------------- |
+| `packages/pdf-conversion-utils/` | Standalone AGPL wrapper source, build files and tests                                         |
 | `packages/ghostscript/`          | Extracted ghoulscript WASM package, build support, tests and notices                          |
 | `packages/ghostscript/ghostpdl/` | Complete Ghostpdl source, imported with `git subtree --squash`                                |
 | `provenance/`                    | Source revisions, original build script, npm release metadata and upstream root build support |
@@ -72,8 +75,7 @@ repository's initial import.
 A separate [Ghostscript 10.08.0 build recipe](builds/ghostscript-10.08.0/README.md)
 pins Emscripten 6.0.6 and all source inputs for a new candidate. It leaves the
 historical source snapshot unchanged. Build results and remaining integration
-checks are tracked with that recipe. The selected licensing route is AGPL;
-the scope and packaging of the actual CE.SDK integration still require review.
+checks are tracked with that recipe. The selected licensing route is AGPL. The runtime documentation records the versioned source and notice requirements.
 
 ## Updates and licensing
 
