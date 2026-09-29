@@ -1,0 +1,13 @@
+{
+  "name": "imgly-pdf-utils-source",
+  "private": true,
+  "description": "Pinned source archive and build inputs for Ghostscript WASM",
+  "license": "SEE LICENSE IN NOTICE.md",
+  "scripts": {
+    "verify:sources": "python3 scripts/verify-sources.py",
+    "build:wasm": "cd packages/ghostscript && bash build.sh"
+  },
+  "devDependencies": {
+    "@types/emscripten": "1.39.13"
+  }
+}

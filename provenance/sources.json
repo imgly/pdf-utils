@@ -1,0 +1,109 @@
+{
+  "ghoulscript": {
+    "repository": "https://github.com/privy-open-source/ghoulscript",
+    "snapshot": "159bb2c5efb76bd33c77c98a79460a668d890f87",
+    "npmReleaseCommit": "c00b95de4b6f6f10d5676ff2408f6f7dbd9815a6",
+    "buildTree": "b4c87836de20084c77cb33f033384a7dfdc602b4",
+    "files": [
+      {
+        "path": "packages/ghostscript/.gitignore",
+        "mode": "100644",
+        "gitBlob": "89f9ac04aac6c8ee66e158853e7d0439b3ec782d",
+        "sha256": "a888b9df89402a815bdb15d30c5280b090be11655ab4cc2299ce748d44cd6ed4"
+      },
+      {
+        "path": "packages/ghostscript/LICENSE",
+        "mode": "100644",
+        "gitBlob": "0ad25db4bd1d86c452db3f9602ccdbe172438f52",
+        "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef"
+      },
+      {
+        "path": "packages/ghostscript/README.md",
+        "mode": "100644",
+        "gitBlob": "e976deb4e285d447136e73f674523b600a1ce9e3",
+        "sha256": "b36f25da29a175a878c2c21d8b2cb4587f4e45dea42513885055b46f98255a04"
+      },
+      {
+        "path": "packages/ghostscript/build.sh",
+        "mode": "100755",
+        "gitBlob": "2dbfcf6bf1e28b9b3154f1afb79c0e98994b608b",
+        "sha256": "acb34db381b453c5412b73b00366e0402416350d558d7cecd7aaea8df5f44b11"
+      },
+      {
+        "path": "packages/ghostscript/build/arch_wasm.h",
+        "mode": "100644",
+        "gitBlob": "6088b830903c7cf3d56cd86f89f179f15fca5d80",
+        "sha256": "5ab119d8980e443e05f4d292b9f22a97c0125423266af7618e150b92e556d6bd"
+      },
+      {
+        "path": "packages/ghostscript/build/gs.cjs",
+        "mode": "100644",
+        "gitBlob": "e02d7a0a99372d0dfc0487e1899b04f72204dc04",
+        "sha256": "999e137280558b8cadaf5659f0a7925eac06b5926f8ac17b06d1f3ffa8a2b7d3"
+      },
+      {
+        "path": "packages/ghostscript/build/gs.d.ts",
+        "mode": "100644",
+        "gitBlob": "18e1f0a11d978063d45a5a1b1db0840debc4aeab",
+        "sha256": "ad782a1d089377d91be3771cb19a18840b13d59bf52656362e9d24a30d0cd5cc"
+      },
+      {
+        "path": "packages/ghostscript/build/meta.d.ts",
+        "mode": "100644",
+        "gitBlob": "5b218a3d3b0912890eccf8a7b5ef9be0f0e9869e",
+        "sha256": "cda07616a2e47768068f82c7a97daf68e110e9667a8a230484cb3f26b6e680b0"
+      },
+      {
+        "path": "packages/ghostscript/build/post-build.js",
+        "mode": "100644",
+        "gitBlob": "1f78b72f3be206b9b81b245569d7e536587a2c30",
+        "sha256": "36e031292ed7fc55c39b763a4ec4c7d3047a5978f4609e15a1062b12c565b42e"
+      },
+      {
+        "path": "packages/ghostscript/build/post.js",
+        "mode": "100644",
+        "gitBlob": "d4ba8cbe9af1256ad1147d0205940d31e63624aa",
+        "sha256": "288171d2b64374a47cfb5097d1581a798f9bf2d55769481fad427ba3fa93e9d0"
+      },
+      {
+        "path": "packages/ghostscript/build/pre.js",
+        "mode": "100644",
+        "gitBlob": "be08e882c9d5e83c7be48fb6d9e07a8b09855f44",
+        "sha256": "1de707df1c3780bce451be39cec707947e53ebe858d0783a2af76fe90aeeddab"
+      },
+      {
+        "path": "packages/ghostscript/package.json",
+        "mode": "100644",
+        "gitBlob": "908cc91946eb6f75007ecf9bd55ae1864a58cc19",
+        "sha256": "30fa6c545355816d8e368b431d8e4c2ff60e8e52c9bdaafec76b6bb92d9ecd78"
+      },
+      {
+        "path": "packages/ghostscript/tests/basic.test.js",
+        "mode": "100644",
+        "gitBlob": "8ae0b99283288d9ff6f21211a05b2751a5d5b68a",
+        "sha256": "1c36143d54b4112352e2496ea6513cd974376c947ad7b51bddc368a61bca4686"
+      },
+      {
+        "path": "packages/ghostscript/tests/tiger.eps",
+        "mode": "100644",
+        "gitBlob": "eebd7af5eebc7ed8a5cad88451fd02c611d015ae",
+        "sha256": "ed255555fdab768cce7f025dcde744a6807292cac40f80f73733fbffe61edb4f"
+      }
+    ]
+  },
+  "ghostpdl": {
+    "repository": "https://github.com/ArtifexSoftware/ghostpdl",
+    "commit": "7145885041bb52cc23964f0aa2aec1b1c82b5908",
+    "tree": "a3a83b2fbafddad0d1e2853eb6aa7bf218b5ae2a",
+    "prefix": "packages/ghostscript/ghostpdl"
+  },
+  "binaryOrigin": {
+    "package": "@privyid/ghostscript",
+    "version": "0.1.0-alpha.1",
+    "tarball": "https://registry.npmjs.org/@privyid/ghostscript/-/ghostscript-0.1.0-alpha.1.tgz",
+    "npmTarballSHA1": "ef3acecff13ace460a84b0eba60348ed605fa061"
+  },
+  "originalEmscriptenVersion": null,
+  "originalLLVMVersion": null,
+  "buildReproduced": false
+}

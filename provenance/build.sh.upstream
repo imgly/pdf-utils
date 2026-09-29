@@ -59,7 +59,9 @@ cp $ROOT/ghostpdl/bin/gs.* .
 # Apply version & create d.ts
 node "$ROOT/build/post-build.js"
 
-# IMG.LY: Ghostpdl is a subtree, not a separate Git checkout. Leave build
-# outputs in place; the original submodule cleanup is unsafe in this layout.
+# Cleanup
+cd "$ROOT/ghostpdl"
+git clean -xdf
+git checkout .
 
 echo "Done!"
