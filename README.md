@@ -18,6 +18,7 @@ No IMG.LY proprietary runtime or editor source is included.
 | `packages/ghostscript/ghostpdl/` | Complete Ghostpdl source, imported with `git subtree --squash` |
 | `provenance/` | Source revisions, original build script, npm release metadata and upstream root build support |
 | `scripts/verify-sources.py` | Checks the pinned source trees and optional source archive |
+| `scripts/source-archive.py` | Creates an archive of the exact Git blob contents |
 
 The initial snapshot is ghoulscript
 [`159bb2c`](https://github.com/privy-open-source/ghoulscript/tree/159bb2c5efb76bd33c77c98a79460a668d890f87)
@@ -37,6 +38,8 @@ python3 scripts/verify-sources.py
 
 For the historical snapshot, check out tag `source-gs-10.03.1-privy-0.1.0-alpha.1`.
 Keep versioned source links pinned to a tag or full commit, rather than `main`.
+Use the source archive attached to that release for exact Git blob contents;
+GitHub's automatic archives may normalize line endings according to upstream attributes.
 
 ## Build status
 

@@ -34,7 +34,7 @@ After committing and verifying the selected source revision:
 
 ```sh
 python3 scripts/verify-sources.py
-git archive --format=tar.gz --prefix=pdf-utils/ HEAD > ../pdf-utils-source.tar.gz
+python3 scripts/source-archive.py ../pdf-utils-source.tar.gz
 python3 scripts/verify-sources.py --archive ../pdf-utils-source.tar.gz
 ```
 
@@ -42,6 +42,11 @@ The archive verification compares every archived file and symlink with the Git
 tree, including Ghostpdl. Attach the verified archive and its SHA-256 to the
 matching source release. This archive needs neither Git submodules nor access
 to an external upstream checkout.
+
+The archive script reads Git blobs directly and refuses to overwrite an existing
+file. Plain `git archive` applies the upstream `.gitattributes` rules and converts
+line endings in some `.inf` files. The attached archive preserves exact Git blob
+contents; GitHub's automatic source archives may apply those line-ending rules.
 
 Git may warn about attribute macros in Ghostpdl's nested `.gitattributes` file.
 Those upstream definitions are retained for source identity; Git only accepts

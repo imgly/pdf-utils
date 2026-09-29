@@ -44,6 +44,13 @@ Its public npm tarball has SHA-1
 `ef3acecff13ace460a84b0eba60348ed605fa061`.
 This repository archives sources; it does not redistribute that npm tarball.
 
+The public npm artifacts were independently hashed during this import:
+
+| File | Bytes | SHA-256 |
+| --- | ---: | --- |
+| `dist/gs.js` | 92,584 | `21c082dec7918d1f1e45f80f152715a120fc468665e45b0d48e5ae919e36eca6` |
+| `dist/gs.wasm` | 19,357,923 | `3ced985444f238d2a9b9a3f524c2160f3ad82f904908b5345169c7f576308986` |
+
 The exact original Emscripten/LLVM version and complete original build environment
 have not been established. The WASM has no custom sections identifying producers.
 Source correspondence is supported by upstream's recorded revisions, but a
