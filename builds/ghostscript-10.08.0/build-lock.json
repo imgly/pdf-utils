@@ -1,0 +1,67 @@
+{
+  "ghostscriptVersion": "10.08.0",
+  "ghostpdlCommit": "05631c2cba4e578fdd6bd25cae6f0939436de848",
+  "sourceURL": "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10080/ghostpdl-10.08.0.tar.gz",
+  "sourceSHA256": "605821a16ddbc159d8f6ccd961e0b96e6fee5af28048ea3b3ceaa1927237bdd6",
+  "ghoulscriptCommit": "75545f5e10fd9391ed6798c97bafb19400aecc26",
+  "emscriptenVersion": "6.0.6",
+  "containerImage": "emscripten/emsdk@sha256:1107465ce37d6d95942e53774ef2d272bea3880bb07d37fe63213469ef2d05dc",
+  "platform": "linux/arm64",
+  "upstreamFiles": [
+    {
+      "path": "upstream/build.sh",
+      "sha256": "526291dc20199b00dbdcb89ac7f40fb494aff49b767a756eb30b798f0f90269b",
+      "upstreamPath": "packages/ghostscript/build.sh",
+      "gitBlob": "2514902aa7f709a78722419b5bfa0c1ca87dc44c"
+    },
+    {
+      "path": "upstream/package.json",
+      "sha256": "ea5197d747c9969000ce8d6cb9baa80bc1b6054a1fb5ba482d788233e269f6ef",
+      "upstreamPath": "packages/ghostscript/package.json",
+      "gitBlob": "4bbdb8f57f0c16c1897deef8ac463ed0bc8edc35"
+    },
+    {
+      "path": "upstream/build/arch_wasm.h",
+      "sha256": "4bdd7244aabb0c43ade86c03104572429f3c4f29db52b1f822b231ca3aa2ecfb",
+      "upstreamPath": "packages/ghostscript/build/arch_wasm.h",
+      "gitBlob": "3cffd23780e0fc088edd00c7a84f20c76ff42e5b"
+    },
+    {
+      "path": "upstream/build/gs.cjs",
+      "sha256": "999e137280558b8cadaf5659f0a7925eac06b5926f8ac17b06d1f3ffa8a2b7d3",
+      "upstreamPath": "packages/ghostscript/build/gs.cjs",
+      "gitBlob": "e02d7a0a99372d0dfc0487e1899b04f72204dc04"
+    },
+    {
+      "path": "upstream/build/gs.d.ts",
+      "sha256": "ad782a1d089377d91be3771cb19a18840b13d59bf52656362e9d24a30d0cd5cc",
+      "upstreamPath": "packages/ghostscript/build/gs.d.ts",
+      "gitBlob": "18e1f0a11d978063d45a5a1b1db0840debc4aeab"
+    },
+    {
+      "path": "upstream/build/meta.d.ts",
+      "sha256": "cda07616a2e47768068f82c7a97daf68e110e9667a8a230484cb3f26b6e680b0",
+      "upstreamPath": "packages/ghostscript/build/meta.d.ts",
+      "gitBlob": "5b218a3d3b0912890eccf8a7b5ef9be0f0e9869e"
+    },
+    {
+      "path": "upstream/build/post-build.js",
+      "sha256": "5a1b0f76127d12ea0dbd4e184b205900048bf99c2bf319cae9df0d44aecd0ca6",
+      "upstreamPath": "packages/ghostscript/build/post-build.js",
+      "gitBlob": "e12453028e0d4440dbeeeb992d0bf976f54349af"
+    },
+    {
+      "path": "upstream/build/post.js",
+      "sha256": "288171d2b64374a47cfb5097d1581a798f9bf2d55769481fad427ba3fa93e9d0",
+      "upstreamPath": "packages/ghostscript/build/post.js",
+      "gitBlob": "d4ba8cbe9af1256ad1147d0205940d31e63624aa"
+    },
+    {
+      "path": "upstream/build/pre.js",
+      "sha256": "1de707df1c3780bce451be39cec707947e53ebe858d0783a2af76fe90aeeddab",
+      "upstreamPath": "packages/ghostscript/build/pre.js",
+      "gitBlob": "be08e882c9d5e83c7be48fb6d9e07a8b09855f44"
+    }
+  ],
+  "status": "build candidate; not approved for runtime release"
+}
