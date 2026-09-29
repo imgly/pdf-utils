@@ -1,0 +1,9 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+coverage/
+*.tsbuildinfo
+src/wasm/gs.js
+src/wasm/gs.wasm
+*.tgz

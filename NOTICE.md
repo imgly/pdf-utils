@@ -17,5 +17,4 @@ Ghostpdl's `LICENSE` for resources, font exceptions and optional components.
 
 New IMG.LY-authored maintenance scripts and the build-script adaptation in this
 repository are provided under AGPL-3.0-only. Imported files retain their existing
-notices and applicable licenses. This source archive includes neither the CE.SDK
-editor nor IMG.LY's separate proprietary conversion runtime.
+notices and applicable licenses. The shared conversion wrapper in `packages/pdf-conversion-utils/` is also provided under AGPL-3.0-only as of 2026-09-29; its package license records the grant and its third-party notices. This grant excludes separately copyrighted CE.SDK engine, editor, EPS importer and print-plugin code. The repository does not license those separate products.

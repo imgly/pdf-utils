@@ -1,0 +1,57 @@
+{
+  "name": "@imgly/pdf-conversion-utils",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared worker runtime for Ghostscript PDF conversions. Contains AGPL-3.0 licensed Ghostscript WASM.",
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "./dist/node.cjs",
+  "module": "./dist/browser.js",
+  "types": "./dist/browser.d.ts",
+  "exports": {
+    ".": {
+      "node": {
+        "import": {
+          "types": "./dist/node.d.ts",
+          "default": "./dist/node.js"
+        },
+        "require": {
+          "types": "./dist/node.d.cts",
+          "default": "./dist/node.cjs"
+        }
+      },
+      "default": {
+        "types": "./dist/browser.d.ts",
+        "import": "./dist/browser.js"
+      }
+    },
+    "./assets/*": "./dist/*"
+  },
+  "files": [
+    "dist",
+    "LICENSE.md",
+    "COPYING.AGPL-3.0",
+    "PROVENANCE.md",
+    "THIRD_PARTY_NOTICES.md",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/runtime.test.mjs test/package.test.mjs && tsc --project test/tsconfig.json",
+    "test:browser": "playwright test",
+    "test:all": "npm test && npm run test:browser",
+    "assets:prepare": "node scripts/prepare-wasm.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2",
+    "@types/node": "22.19.15",
+    "esbuild": "0.25.12",
+    "typescript": "5.9.3"
+  },
+  "packageManager": "npm@10.9.8"
+}
